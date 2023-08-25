@@ -4,7 +4,7 @@ dotenv.config()
 
 
 const instance = axios.create({
-	baseURL: process.env.REACT_APP_API_URL //базова частина URL
+	baseURL: "https://pet-blog-ua-01859ab07cf7.herokuapp.com" //базова частина URL
 })
 
 instance.interceptors.request.use((config) => {
