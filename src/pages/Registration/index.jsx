@@ -77,7 +77,7 @@ export const Registration = () => {
 
 
         <Button disabled={!isValid} type="submit" size="large" variant="contained" fullWidth>
-          Зарегистрироваться
+          Зареєструватись
         </Button>
       </form>
     </Paper>

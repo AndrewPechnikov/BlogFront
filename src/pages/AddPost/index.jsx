@@ -114,13 +114,13 @@ export const AddPost = () => {
   return (
     <Paper style={{ padding: 30 }}>
       <Button onClick={() => inputFileRef.current.click()} variant="outlined" size="large">
-        Загрузить превью
+        Завантажити прев'ю
       </Button>
       <input ref={inputFileRef} type="file" onChange={handleChangeFile} hidden />
       {imageUrl && (
         <>
           <Button variant="contained" color="error" onClick={onClickRemoveImage}>
-            Удалить
+            Видалити
           </Button>
           <img className={styles.image} src={`process.env.REACT_APP_API_URL${imageUrl}`} alt="Uploaded" />
         </>
@@ -149,7 +149,7 @@ export const AddPost = () => {
           {isEditing ? "Зберегти" : "Опублікувати"}
         </Button>
         <a href="/">
-          <Button size="large" >Отмена</Button>
+          <Button size="large" >Відміна</Button>
         </a>
       </div>
     </Paper >
