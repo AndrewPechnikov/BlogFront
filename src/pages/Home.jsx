@@ -40,7 +40,7 @@ export const Home = () => {
             <Post
               id={obj._id}
               title={obj.title}
-              imageUrl={obj.imageUrl ? `/${obj.imageUrl}` : ""}
+              imageUrl={obj.imageUrl ? `https://mern-pet-blog.onrender.com/${obj.imageUrl}` : ""}
               user={obj.user}
               createdAt={obj.createdAt}
               viewsCount={obj.viewsCount}
