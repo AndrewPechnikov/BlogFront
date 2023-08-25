@@ -29,8 +29,8 @@ export const Home = () => {
   return (
     <>
       <Tabs style={{ marginBottom: 15 }} value={0} aria-label="basic tabs example">
-        <Tab label="Новые" />
-        <Tab label="Популярные" />
+        <Tab label="Нове" />
+        <Tab label="Популярне" />
       </Tabs>
       <Grid container spacing={4}>
         <Grid xs={8} item>
@@ -40,13 +40,17 @@ export const Home = () => {
             <Post
               id={obj._id}
               title={obj.title}
-              imageUrl={obj.imageUrl}
+              imageUrl={obj.imageUrl ? `http://localhost:4444${obj.imageUrl}` : ""}
+              user={obj.user}
+              createdAt={obj.createdAt}
               viewsCount={obj.viewsCount}
               commentsCount={3}
               tags={obj.tags}
+              // isEditable
               isEditable={userData?._id === obj.user._id}
             />
           )
+
           }
         </Grid>
         <Grid xs={4} item>
